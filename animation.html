@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Animation</title>
+    <link rel="shortcut icon" href="Images/Cricket_Ball_PNG_Clipart_Picture.png" type="image/x-icon">
+
+    <style>
+        .field {
+
+            height: 550px;
+            width: 100%;
+            border: .1px solid greenyellow;
+            background-color: rgb(97, 218, 40);
+        }
+
+        .ball {
+            height: 50px;
+            width: 50px;
+            position: relative;
+            left: 198px;
+            bottom: 30px;
+            transition: transform 3s ease-out 0.45s;
+        }
+
+        .bat {
+            height: 400px;
+            transition: transform 0.4s ease-in;
+        }
+
+        .field:hover .bat {
+            transform-origin: top right;
+            transform: rotate(-60deg);
+
+        }
+
+        .field:hover .ball {
+            transform: translate(700px, -200px) rotate(360deg);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="field">
+        <img class="bat" src="Images/bat.png" alt="">
+        <img class="ball" src="Images/Cricket_Ball_PNG_Clipart_Picture.png" alt="">
+    </div>
+</body>
+
+</html>

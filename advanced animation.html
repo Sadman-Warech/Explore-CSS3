@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Animation</title>
+    <link rel="shortcut icon" href="Images/css.png" type="image/x-icon">
+
+    <style>
+        @keyframes sliding {
+            0% {
+                background-color: coral;
+                left: 0;
+                top: 0;
+            }
+
+            25% {
+                background-color: darkred;
+                scale: 50%;
+                top: 425px;
+                transform: scale(.5);
+            }
+
+            50% {
+                background-color: coral;
+                top: 0;
+                transform: scale(1);
+            }
+
+            75% {
+                background-color: darkred;
+                transform: scale(.5);
+                top: 425px;
+            }
+
+            100% {
+                background-color: coral;
+                left: 1000px;
+                top: 0;
+            }
+
+        }
+
+        .stage {
+            height: 500px;
+            width: 1100px;
+            background-color: cornflowerblue;
+        }
+
+        .ball {
+            height: 100px;
+            width: 100px;
+
+            border-radius: 50%;
+            position: relative;
+            animation: sliding 5s ease-in-out 0.5s infinite alternate;
+            animation-play-state: running;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Advanced Animation Learning</h1>
+    <!-- <h1>Advanced Animation Learning</h1> -->
+
+    <div class="stage">
+        <div class="ball"></div>
+    </div>
+</body>
+
+</html>
